@@ -1,6 +1,6 @@
 class Bestcars::CLI
   def begin
-    Bestcars::Scraper.scrapter_content
+    Bestcars::Scraper.scraper_content
     "Here is the list of the top 100 cars by telegraphUK!"
     ranks
   end
