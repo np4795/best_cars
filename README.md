@@ -1,8 +1,6 @@
 # BestCars
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/best_cars`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This program allows you to obtain information from this list of 100 best cars ever made https://www.telegraph.co.uk/guides/100-best-cars/. If you are a car enthusiast you may enjoy seeing some of the cars that made this list and learning more about them. Enjoy using the program!
 
 ## Installation
 
