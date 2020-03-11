@@ -1,7 +1,8 @@
 class Bestcars::CLI
+  
   def begin
     Bestcars::Scraper.scraper_content
-    "Here is the list of the top 100 cars by telegraphUK!"
+    puts "Here is the list of the top 100 cars by telegraphUK!"
     ranks
   end
   

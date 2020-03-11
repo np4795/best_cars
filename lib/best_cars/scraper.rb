@@ -18,7 +18,7 @@ class Bestcars::Scraper
       end
       
       cars.each do |car|
-       Cars.new(car_rank)
+       Bestcars::Cars.new(car_rank)
      end
    end
  end
