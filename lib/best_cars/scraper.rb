@@ -1,4 +1,5 @@
-class Bestcars::Scraper
+require 'pry'
+class BestCars::Scraper
 
  def self.scraper_content
  cars = []

@@ -1,6 +1,6 @@
-require "best_cars/version"
 
-class Bestcars::Cars
+
+class BestCars::Cars
   attr_accessor :name :years :type :origin :position :description
   
   @@all = []

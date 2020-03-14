@@ -8,7 +8,7 @@ require 'pry'
 require 'open-uri'
 require 'nokogiri'
 
-Bundler.require
+
 
 module BestCars
   class Error < StandardError; end
