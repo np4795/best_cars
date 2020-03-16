@@ -2,10 +2,14 @@ require 'pry'
 class BestCars::CLI
   
   def call
-    BestCars::Scraper.scraper_content
+    BestCars::Scraper.scrape_cars
     puts ""
     puts "Here is the list of the top 100 cars by telegraphUK!"
     ranks
+  end
+  
+  def car_list
+    Cars.all
   end
   
   
@@ -15,27 +19,27 @@ class BestCars::CLI
     puts "Pick the car ranking you would like to know more information about" #There are only 100 cars on the list therefore, index is from 0-99, ranking is inverse to integer so 0=rank 100.
     input = gets.strip.to_i
     
-    car_ranks(input)
+    cars_data(input)
     
-    puts "What information would you like about this car"
+    puts "What information would you like about this car?"
     input = gets.strip
     
-    cars_list = BestCars::Cars.find(input.to_i)
+    cars_data = BestCars::Cars.find(input.to_i)
     
-    car_ranks(rank)
+    car_data(rank)
     
     puts ""
     puts "Are there any other cars you would like information about on this list? Enter Y or N"
     
     if input == "Y"
-      begin
+      call
     elseif input == "N"
       puts "Please return if you have any further inquiries on other cars"
       exit
       
     else
       puts "No item found, please try again"
-      begin
+      call
     end
   end
   

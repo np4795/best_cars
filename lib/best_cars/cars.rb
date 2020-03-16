@@ -1,17 +1,15 @@
 
-
 class BestCars::Cars
-  attr_accessor :name :years :type :origin :position :description
+  attr_accessor :name, :years, :type, :origin, :description
   
   @@all = []
   
-  def initialize(name, years, type, position, origin, description)
+  def initialize(name, years, type, origin, description)
     @name = name
     @years = years
     @type = type
     @origin = origin
-    @description = origin
-    @position = position
+    @description = description
     
     
     @@all << self
@@ -21,9 +19,5 @@ class BestCars::Cars
     @@all
   end
   
- def self.reset_all 
-    @@all.clear 
-  end 
- 
   
 end
