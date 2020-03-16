@@ -1,10 +1,10 @@
 
-class BestCars::Cars
+class Cars
   attr_accessor :name, :years, :type, :origin, :description
   
   @@all = []
   
-  def initialize(name, years, type, origin, description)
+  def initialize(name)
     @name = name
     @years = years
     @type = type

@@ -2,4 +2,4 @@
 
 require_relative "../lib/environment"
 
-BestCars::CLI.new.call
+CLI.new.call
