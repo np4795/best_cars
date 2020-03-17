@@ -26,7 +26,7 @@ class CLI
   
   def list
     input = nil
-       car_number = (0..8).to_a 
+       car_number = (0..99).to_a 
     input = gets.strip.downcase 
     index = input.to_i - 1
       if input.to_i > 0 && car_number.include?(index)
