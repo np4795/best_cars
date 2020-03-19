@@ -1,10 +1,9 @@
-
-class Cars
+class BestCars::Cars
   attr_accessor :name, :years, :type, :origin, :description
   
   @@all = []
   
-  def initialize(name)
+  def initialize
     @name = name
     @years = years
     @type = type
@@ -19,5 +18,9 @@ class Cars
     @@all
   end
   
+  
+   def self.find_by_id(id)
+    self.all[id-1]
+  end
   
 end

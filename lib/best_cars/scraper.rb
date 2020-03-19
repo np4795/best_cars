@@ -1,29 +1,19 @@
-require 'pry'
-class Scraper
+class BestCars::Scraper
   
   def self.scrape_cars
-    cars = []
     html = open("https://www.telegraph.co.uk/guides/100-best-cars/")
       doc = Nokogiri::HTML(html)
-      cars_data = doc.css('div.car-data')
-      cars_data.each do |cars_data|
-      
-        data = {
-          :name => cars_data.css('div.car-data div.title').text,
-          :years => cars_data.css('div.car-data div.years').text,
-          :type => cars_data.css('div.car-data div.type').text,
-          :origin => cars_data.css('div.car-data div.origin').text,
-          :description => cars_data.css('div.car-data div.description').text
-        }
-        cars << data
+      data = doc.css('div.car-data')
+      data.each_with_index do |info, i|
+          car = BestCars::Cars.new
+          car.name = info.css('div.title').text,
+          car.years = info.css('div.years').text,
+          car.type = info.css('div.type').text,
+          car.origin = info.css('div.origin').text,
+          car.description = info.css('div.description').text
+        end
       end
-    
-      
     end
- end
       
-      
-  
- 
       
 
